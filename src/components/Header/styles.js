@@ -8,7 +8,7 @@ export default makeStyles((theme) => ({
     },
   },
   search: {
-    position: 'relative',
+    position: 'relative',                                            //NavBar formatting with each header 
     borderRadius: theme.shape.borderRadius,
     backgroundColor: alpha(theme.palette.common.white, 0.25),
     '&:hover': { backgroundColor: alpha(theme.palette.common.white, 0.35) },
