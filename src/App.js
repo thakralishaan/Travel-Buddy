@@ -6,7 +6,7 @@ import Header from './components/Header/Header';
 import List from './components/List/List';
 import Map from './components/Map/Map';
 
-const App = () => {
+const App = () => {                                                //useState features bounds and coords 
   const [type, setType] = useState('restaurants');
   const [rating, setRating] = useState('');
 
@@ -17,7 +17,7 @@ const App = () => {
   const [filteredPlaces, setFilteredPlaces] = useState([]);
   const [places, setPlaces] = useState([]);
 
-  const [autocomplete, setAutocomplete] = useState(null);
+  const [autocomplete, setAutocomplete] = useState(null);             //for each child and parent
   const [childClicked, setChildClicked] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
