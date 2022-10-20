@@ -5,8 +5,8 @@ export const getPlacesData = async (type, sw, ne) => {
   try {
     const { data: { data } } = await axios.get(`https://travel-advisor.p.rapidapi.com/${type}/list-in-boundary`, {
       params: {
-        bl_latitude: sw.lat,
-        bl_longitude: sw.lng,
+        bl_latitude: sw.lat,         //helps with setting the location cordinates of places 
+        bl_longitude: sw.lng,         //latitude n longitude
         tr_longitude: ne.lng,
         tr_latitude: ne.lat,
       },
@@ -25,11 +25,11 @@ export const getPlacesData = async (type, sw, ne) => {
 export const getWeatherData = async (lat, lng) => {
   try {
     if (lat && lng) {
-      const { data } = await axios.get('https://community-open-weather-map.p.rapidapi.com/find', {
+      const { data } = await axios.get('https://community-open-weather-map.p.rapidapi.com/find', {       //rapid api source link 
         params: { lat, lon: lng },
         headers: {
           'x-rapidapi-key': "df1057f8b9mshd12214038d81e2ap121719jsnb10d586c3131",
-          'x-rapidapi-host': 'community-open-weather-map.p.rapidapi.com',
+          'x-rapidapi-host': 'community-open-weather-map.p.rapidapi.com',           //rapidapi key and host
         },
       });
 
