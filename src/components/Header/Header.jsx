@@ -11,7 +11,7 @@ const Header = ({ onPlaceChanged, onLoad }) => {
   return (
     <AppBar position="static">
       <Toolbar className={classes.toolbar}>
-        <Typography variant="h5" className={classes.title}>
+        <Typography variant="h5" className={classes.title}>       
           Travel Buddy
         </Typography>
         <Box display="flex">
